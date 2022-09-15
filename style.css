@@ -1,0 +1,148 @@
+body {
+    display: grid;
+    place-content: center;
+    min-height: 100vh;
+    background-image: linear-gradient(
+      to right top,
+      #c471f4,
+      #6bd0e6,
+      #6accd8,
+      #6bc7ca,
+      #6fc2bc
+    );
+  }
+  
+  #title{
+    text-align: center;
+  }
+  
+  table { 
+      width: 750px; 
+      border-collapse: collapse; 
+      margin:50px auto;
+      }
+  
+  /* Zebra striping */
+  tr:nth-of-type(odd) { 
+      background: #eee; 
+      }
+  
+  th { 
+      background: #3498db; 
+      color: white; 
+      font-weight: bold; 
+      }
+  
+  td, th { 
+      padding: 10px; 
+      border: 1px solid #ccc; 
+      text-align: left; 
+      font-size: 18px;
+      }
+  
+  /* 
+  Max width before this PARTICULAR table gets nasty
+  This query will take effect for any screen smaller than 760px
+  and also iPads specifically.
+  */
+  @media 
+  only screen and (max-width: 760px),
+  (min-device-width: 768px) and (max-device-width: 1024px)  {
+  
+      table { 
+            width: 100%; 
+      }
+  
+      /* Force table to not be like tables anymore */
+      table, thead, tbody, th, td, tr { 
+          display: block; 
+      }
+      
+      /* Hide table headers (but not display: none;, for accessibility) */
+      thead tr { 
+          position: absolute;
+          top: -9999px;
+          left: -9999px;
+      }
+      
+      tr { border: 1px solid #ccc; }
+      
+      td { 
+          /* Behave  like a "row" */
+          border: none;
+          border-bottom: 1px solid #eee; 
+          position: relative;
+          padding-left: 50%; 
+      }
+  
+      td:before { 
+          /* Now like a table header */
+          position: absolute;
+          /* Top/left values mimic padding */
+          top: 6px;
+          left: 6px;
+          width: 45%; 
+          padding-right: 10px; 
+          white-space: nowrap;
+          /* Label the data */
+          content: attr(data-column);
+  
+          color: #000;
+          font-weight: bold;
+      }
+  
+  }
+  
+  .container {
+    display: flex;
+    gap: 100px;
+    justify-content: space-between;
+    height: 100%;
+    width: 100%;
+  }
+  
+  .form {
+    width: 600px;
+    height: 500px;
+    border: 5px solid rgb(224, 238, 239);
+    padding: 40px;
+    border-radius: 20px;
+  }
+  
+  .tableDetails {
+    width: 600px;
+    height: 587px;
+    border: 5px solid rgb(224, 238, 239);
+    padding: 40px;
+    border-radius: 20px;
+  }
+  
+  .form {
+    font-family: Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+      sans-serif;
+    font-size: larger;
+  }
+  
+  input[type="text"] {
+    height: 30px;
+    width: 250px;
+    border-radius: 10px;
+    margin: 7px 3px;
+    border: hidden;
+  }
+  
+  .buttonHolder {
+    text-align: center;
+  }
+  .errorMsg{
+      font-size: 13px;
+      color: red;
+  }
+  
+  
+  input[type="button"]{
+  height: 30px;
+  width: 80px;
+  border: none;
+  border-radius: 20px;
+  }

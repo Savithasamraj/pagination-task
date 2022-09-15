@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DOM Task</title>
+    <link rel="stylesheet" href="style.css" />
+    <!-- <style>
+      th,
+      td {
+        padding: 15px;
+        text-align: center;
+      }
+
+      table,
+      th,
+      td {
+        border: 1px solid black;
+        border-collapse: collapse;
+      }
+      div {
+        width: 500px;
+      }
+      p {
+        font-family: Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans",
+          "Helvetica Neue", sans-serif;
+
+        font-weight: bold;
+        text-align: center;
+      }
+    </style> -->
+  </head>
+  <body>
+    <script src="https://app.zenclass.in/sheets/v1/js/zen/suite/bundle.js"></script>
+    <h1 id="title">DOM Pagination Task</h1>
+    
+    <section class="container">
+<section class="section1">
+  <p id="description" style="font-size:larger; "> Enter your details here!!</p>
+      <form id="myForm" class="form">
+        <label for="Fname">Name:</label>
+        <input type="text" id="Fname" placeholder="Enter your First Name" />
+        <input
+          type="text"
+          id="Lname"
+          placeholder="Enter your Last Name"
+        /><br />
+        <label for="address">Address:</label>
+        <input
+          type="text"
+          id="address"
+          placeholder="Enter your address"
+        /><br />
+        <label for="pin">PinCode:</label>
+        <input
+          type="text"
+          id="pin"
+          placeholder="Enter your PinCode"
+          maxlength="6"
+        /><br />
+        <label for="gender">Gender:</label>
+        <input type="text" id="gender" placeholder="Enter your Gender" /><br />
+        <h3>Select any two</h3>
+        <input
+          type="checkbox"
+          name="food"
+          id="briyani"
+          value="Briyani"
+          onclick="checkboxValidation()"
+        />
+        <label for="briyani">Briyani</label>
+        <input
+          type="checkbox"
+          name="food"
+          id="fRice"
+          value="FriedRice"
+          onclick="checkboxValidation()"
+        />
+        <label for="fRice">Fried Rice</label>
+        <input
+          type="checkbox"
+          name="food"
+          id="dosa"
+          value="Dosa"
+          onclick="checkboxValidation()"
+        />
+        <label for="dosa">Dosa</label><br />
+        <input
+          type="checkbox"
+          name="food"
+          id="idly"
+          value="Idly"
+          onclick="checkboxValidation()"
+        />
+        <label for="idly">Idly</label>
+        <input
+          type="checkbox"
+          name="food"
+          id="chapathi"
+          value="Chapathi"
+          onclick="checkboxValidation()"
+        />
+        <label for="chapathi">Chapathi</label>
+        <p class="errorMsg"></p>
+
+        <label for="state">State:</label>
+        <input type="text" id="state" placeholder="Enter your State" /><br />
+        <label for="country">Country:</label>
+        <input
+          type="text"
+          id="country"
+          placeholder="Enter your Country"
+        /><br /><br />
+        <div class="buttonHolder">
+          <input type="button" value="Submit" onclick="processForm()" />
+        </div>
+      </form>
+      <div id="buttons" class="d-flex justify-content-center">
+<button onclick="nextPage()"> Next </button>
+</div>
+</section>
+<section class="section2">
+  <div class="table-responsive">
+      <table id="table" class="table table-bordered">
+        <thead>
+          <tr >
+            <th>FirstName</th>
+            <th>LastName</th>
+            <th>Address</th>
+            <th>PinCode</th>
+            <th>Gender</th>
+            <th colspan="2">Food</th>
+            <th>State</th>
+            <th>Country</th>
+          </tr>
+        </thead>
+        <tbody class="tableHeading"></tbody>
+      </table>
+    </div>
+      <div id="buttons" class="d-flex justify-content-center">
+        <button onclick="beforePage()" > Before </button>
+        </div>
+    </section>
+  </section>
+    <script src="script.js"></script>
+  </body>
+</html>
